@@ -1,0 +1,329 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="be0d0eae-9a78-41b2-88ab-e9ce31de8a7c" LowerBound="1.1" HigherBound="73.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="QuickLearn.REST.Process" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="75c6869c-ec6b-4a5e-88b2-278d7a898f4b" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="15.1">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="IOrderAPI" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="OperationDeclaration" OID="e5ee7bce-d658-47f0-b8ea-230a24d2f6cf" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="GET_OrderStatus" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="928c116c-4c1c-4580-aff1-6545e44d34d0" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.35">
+                    <om:Property Name="Ref" Value="System.Xml.XmlDocument" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="aa83c2b4-2268-4e55-992e-bb699b051af9" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="8.37" HigherBound="8.72">
+                    <om:Property Name="Ref" Value="QuickLearn.REST.Schemas.OrderStatus" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="OperationDeclaration" OID="73fc28cd-abe8-4f12-8254-d67dfbe3d711" ParentLink="PortType_OperationDeclaration" LowerBound="10.1" HigherBound="14.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="POST_Order" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="8ae40f3a-f3e5-4a83-9abc-be1653057a2b" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="12.13" HigherBound="12.35">
+                    <om:Property Name="Ref" Value="System.Xml.XmlDocument" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="a9941279-0d2c-4866-8b6e-9d3d13006cab" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="12.37" HigherBound="12.72">
+                    <om:Property Name="Ref" Value="QuickLearn.REST.Schemas.OrderStatus" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="0e916bc6-0ad3-49a6-9f2c-107f66718277" ParentLink="Module_ServiceDeclaration" LowerBound="15.1" HigherBound="72.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="OrderApi" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="VariableDeclaration" OID="067ed493-dd46-4602-b32c-9fff1ea1fa51" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="24.1" HigherBound="25.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="orderStatus" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="0acc63a1-51d6-4fd5-a8d2-a4add5ba69be" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="20.1" HigherBound="21.1">
+                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgGETRequest" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="6e974f70-404c-4600-8f32-bea712236349" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="21.1" HigherBound="22.1">
+                <om:Property Name="Type" Value="QuickLearn.REST.Schemas.OrderStatus" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgOrderStatus" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="4242a594-9a66-46fd-b079-f4bf1bce0516" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="22.1" HigherBound="23.1">
+                <om:Property Name="Type" Value="QuickLearn.REST.Schemas.Order" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgOrder" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="7f9fe8ec-9569-4711-9512-e85a9beb905c" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="23.1" HigherBound="24.1">
+                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgRawOrder" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="0de735f6-c1fa-4b6b-882a-cac62a64e30b" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Listen" OID="200a57b4-f0a0-4c41-b1b9-c3176f995cae" ParentLink="ServiceBody_Statement" LowerBound="27.1" HigherBound="70.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Order Processing API" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="ListenBranch" OID="21044dc5-679c-4389-9993-166429e4f90e" ParentLink="ReallyComplexStatement_Branch" LowerBound="27.1" HigherBound="27.1">
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="ListenBranch_1" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="Task" OID="91bf6edd-097a-41ed-93d0-2c3961f35bb1" ParentLink="ComplexStatement_Statement" LowerBound="34.1" HigherBound="49.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Order Ack" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="Construct" OID="4f0c01e4-7b15-4941-a591-9917de1282cd" ParentLink="ComplexStatement_Statement" LowerBound="34.1" HigherBound="41.1">
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Get Order from Raw Order" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="MessageAssignment" OID="de13f791-0924-444c-a8c3-b6fa5f0b9e45" ParentLink="ComplexStatement_Statement" LowerBound="37.1" HigherBound="40.1">
+                                    <om:Property Name="Expression" Value="msgOrder = msgRawOrder;&#xD;&#xA;msgOrder(*) = msgRawOrder(*);" />
+                                    <om:Property Name="ReportToAnalyst" Value="False" />
+                                    <om:Property Name="Name" Value="Get Order" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                                <om:Element Type="MessageRef" OID="d837460e-bd99-4699-93d9-f9b2bd4091ae" ParentLink="Construct_MessageRef" LowerBound="35.31" HigherBound="35.39">
+                                    <om:Property Name="Ref" Value="msgOrder" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="Construct" OID="b8c993a1-6021-4986-a3c2-d13631897faf" ParentLink="ComplexStatement_Statement" LowerBound="41.1" HigherBound="47.1">
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Create Order Ack" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="Transform" OID="f324975b-818d-43c1-bda4-8fe96aba00e7" ParentLink="ComplexStatement_Statement" LowerBound="44.1" HigherBound="46.1">
+                                    <om:Property Name="ClassName" Value="QuickLearn.REST.Process.Order_to_OrderAck" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="Order_to_OrderAck" />
+                                    <om:Property Name="Signal" Value="False" />
+                                    <om:Element Type="MessagePartRef" OID="be60e393-2021-40e3-9273-ae8f4217355d" ParentLink="Transform_InputMessagePartRef" LowerBound="45.97" HigherBound="45.105">
+                                        <om:Property Name="MessageRef" Value="msgOrder" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="MessagePartReference_1" />
+                                        <om:Property Name="Signal" Value="False" />
+                                    </om:Element>
+                                    <om:Element Type="MessagePartRef" OID="79c7e5ae-63e2-49f0-9546-1a9acc23b80c" ParentLink="Transform_OutputMessagePartRef" LowerBound="45.36" HigherBound="45.50">
+                                        <om:Property Name="MessageRef" Value="msgOrderStatus" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="MessagePartReference_2" />
+                                        <om:Property Name="Signal" Value="False" />
+                                    </om:Element>
+                                </om:Element>
+                                <om:Element Type="MessageRef" OID="7bf983c5-760e-465f-aff8-e662a4f849fa" ParentLink="Construct_MessageRef" LowerBound="42.31" HigherBound="42.45">
+                                    <om:Property Name="Ref" Value="msgOrderStatus" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="Send" OID="9f52e003-06d8-47e2-8403-3a241819e7e7" ParentLink="ComplexStatement_Statement" LowerBound="47.1" HigherBound="49.1">
+                                <om:Property Name="PortName" Value="OrderAPI" />
+                                <om:Property Name="MessageName" Value="msgOrderStatus" />
+                                <om:Property Name="OperationName" Value="POST_Order" />
+                                <om:Property Name="OperationMessageName" Value="Response" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Snd_OrderAck" />
+                                <om:Property Name="Signal" Value="True" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="Receive" OID="13e8150e-f190-4395-9ea2-a276fd5a966c" ParentLink="ListenBranch_Statement" LowerBound="30.1" HigherBound="31.109">
+                            <om:Property Name="Activate" Value="True" />
+                            <om:Property Name="PortName" Value="OrderAPI" />
+                            <om:Property Name="MessageName" Value="msgRawOrder" />
+                            <om:Property Name="OperationName" Value="POST_Order" />
+                            <om:Property Name="OperationMessageName" Value="Request" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Rcv_Order" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="DNFPredicate" OID="55a7645f-d536-4efc-a8d7-3171b5645289" ParentLink="Receive_DNFPredicate">
+                                <om:Property Name="LHS" Value="BTS.Operation" />
+                                <om:Property Name="RHS" Value="&quot;POST_Order&quot;" />
+                                <om:Property Name="Grouping" Value="AND" />
+                                <om:Property Name="Operator" Value="Equals" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="ListenBranch" OID="0739952c-53b9-4edd-9180-3b60c545eaa9" ParentLink="ReallyComplexStatement_Branch" LowerBound="27.1" HigherBound="27.1">
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="ListenBranch_2" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="Task" OID="8252b5e2-adee-4699-8bd7-7a9ebc75e896" ParentLink="ComplexStatement_Statement" LowerBound="54.1" HigherBound="68.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Order Status" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="Construct" OID="800bbf62-c5f2-4ad0-b30d-439f27042f79" ParentLink="ComplexStatement_Statement" LowerBound="54.1" HigherBound="66.1">
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Create Order Status Response" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="MessageRef" OID="a62e24ad-60ba-4937-8bc7-a6ddeff916af" ParentLink="Construct_MessageRef" LowerBound="55.31" HigherBound="55.45">
+                                    <om:Property Name="Ref" Value="msgOrderStatus" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                                <om:Element Type="MessageAssignment" OID="7a230e9c-44a8-4329-8826-0b176580e8ee" ParentLink="ComplexStatement_Statement" LowerBound="57.1" HigherBound="65.1">
+                                    <om:Property Name="Expression" Value="orderStatus = new System.Xml.XmlDocument();&#xD;&#xA;orderStatus.LoadXml(@&quot;&lt;ns0:OrderStatus xmlns:ns0=&quot;&quot;http://schemas.quicklearn.com/OrderProcessing/2013/08&quot;&quot;&gt;&lt;Id&gt;ID&lt;/Id&gt;&lt;Status&gt;STATUS&lt;/Status&gt;&lt;/ns0:OrderStatus&gt;&quot;);&#xD;&#xA;&#xD;&#xA;msgOrderStatus = orderStatus;&#xD;&#xA;&#xD;&#xA;msgOrderStatus.Id = msgGETRequest(QuickLearn.REST.Schemas.OrderId);&#xD;&#xA;msgOrderStatus.Status = &quot;Ordered&quot;;" />
+                                    <om:Property Name="ReportToAnalyst" Value="False" />
+                                    <om:Property Name="Name" Value="Create Order Status Response" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="Send" OID="9d8bbf09-0711-447a-ae94-ecbba13f906b" ParentLink="ComplexStatement_Statement" LowerBound="66.1" HigherBound="68.1">
+                                <om:Property Name="PortName" Value="OrderAPI" />
+                                <om:Property Name="MessageName" Value="msgOrderStatus" />
+                                <om:Property Name="OperationName" Value="GET_OrderStatus" />
+                                <om:Property Name="OperationMessageName" Value="Response" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Snd_OrderStatus" />
+                                <om:Property Name="Signal" Value="True" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="Receive" OID="bb468988-7007-497e-b9dd-dce956ccc822" ParentLink="ListenBranch_Statement" LowerBound="50.1" HigherBound="51.121">
+                            <om:Property Name="Activate" Value="True" />
+                            <om:Property Name="PortName" Value="OrderAPI" />
+                            <om:Property Name="MessageName" Value="msgGETRequest" />
+                            <om:Property Name="OperationName" Value="GET_OrderStatus" />
+                            <om:Property Name="OperationMessageName" Value="Request" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Rcv_GETRequest" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="DNFPredicate" OID="891f6bda-35a2-4d0f-ae8a-47153f77d2aa" ParentLink="Receive_DNFPredicate">
+                                <om:Property Name="LHS" Value="BTS.Operation" />
+                                <om:Property Name="RHS" Value="&quot;GET_OrderStatus&quot;" />
+                                <om:Property Name="Grouping" Value="AND" />
+                                <om:Property Name="Operator" Value="Equals" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="92401e2b-a447-4d96-bd21-dde64b5e462d" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="18.1" HigherBound="20.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="13" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="QuickLearn.REST.Process.IOrderAPI" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="OrderAPI" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="LogicalBindingAttribute" OID="760ace91-2188-4dd9-bf5e-f45489b6143f" ParentLink="PortDeclaration_CLRAttribute" LowerBound="18.1" HigherBound="19.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module QuickLearn.REST.Process
+{
+    internal porttype IOrderAPI
+    {
+        requestresponse GET_OrderStatus
+        {
+            System.Xml.XmlDocument, QuickLearn.REST.Schemas.OrderStatus
+        };
+        requestresponse POST_Order
+        {
+            System.Xml.XmlDocument, QuickLearn.REST.Schemas.OrderStatus
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service OrderApi
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements IOrderAPI OrderAPI;
+        message System.Xml.XmlDocument msgGETRequest;
+        message QuickLearn.REST.Schemas.OrderStatus msgOrderStatus;
+        message QuickLearn.REST.Schemas.Order msgOrder;
+        message System.Xml.XmlDocument msgRawOrder;
+        System.Xml.XmlDocument orderStatus;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("200a57b4-f0a0-4c41-b1b9-c3176f995cae")]
+            listen
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("13e8150e-f190-4395-9ea2-a276fd5a966c")]
+                until activate  ((BTS.Operation == "POST_Order")) receive (OrderAPI.POST_Order, msgRawOrder)
+                {
+                orderStatus = new System.Xml.XmlDocument();
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("4f0c01e4-7b15-4941-a591-9917de1282cd")]
+                    construct msgOrder
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("de13f791-0924-444c-a8c3-b6fa5f0b9e45")]
+                        msgOrder = msgRawOrder;
+                        msgOrder(*) = msgRawOrder(*);
+                    }
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("b8c993a1-6021-4986-a3c2-d13631897faf")]
+                    construct msgOrderStatus
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("f324975b-818d-43c1-bda4-8fe96aba00e7")]
+                        transform (msgOrderStatus) = QuickLearn.REST.Process.Order_to_OrderAck (msgOrder);
+                    }
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("9f52e003-06d8-47e2-8403-3a241819e7e7")]
+                    send (OrderAPI.POST_Order, msgOrderStatus);
+                }
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("bb468988-7007-497e-b9dd-dce956ccc822")]
+                until activate  ((BTS.Operation == "GET_OrderStatus")) receive (OrderAPI.GET_OrderStatus, msgGETRequest)
+                {
+                orderStatus = new System.Xml.XmlDocument();
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("800bbf62-c5f2-4ad0-b30d-439f27042f79")]
+                    construct msgOrderStatus
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("7a230e9c-44a8-4329-8826-0b176580e8ee")]
+                        orderStatus = new System.Xml.XmlDocument();
+                        orderStatus.LoadXml(@"<ns0:OrderStatus xmlns:ns0=""http://schemas.quicklearn.com/OrderProcessing/2013/08""><Id>ID</Id><Status>STATUS</Status></ns0:OrderStatus>");
+                        
+                        msgOrderStatus = orderStatus;
+                        
+                        msgOrderStatus.Id = msgGETRequest(QuickLearn.REST.Schemas.OrderId);
+                        msgOrderStatus.Status = "Ordered";
+                    }
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("9d8bbf09-0711-447a-ae94-ecbba13f906b")]
+                    send (OrderAPI.GET_OrderStatus, msgOrderStatus);
+                }
+            }
+        }
+    }
+}
+
