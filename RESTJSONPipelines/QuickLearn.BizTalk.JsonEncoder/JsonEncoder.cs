@@ -171,10 +171,10 @@ namespace QuickLearn.BizTalk
         #region Properties
 
         private const string JSON_SCHEMAS_NS = "http://schemas.quicklearn.com/json/2013/09";
-        private const string JSONP_CALLBACK = "JsonpCallback";
+        private const string JSONP_CALLBACK_PROPNAME = "JsonpCallback";
 
         private const string WCF_PROPERTIES_NS = "http://schemas.microsoft.com/BizTalk/2006/01/Adapters/WCF-properties";
-        private const string HTTP_METHOD = "InboundHttpMethod";
+        private const string HTTP_METHOD_PROPNAME = "InboundHttpMethod";
         private const string OPTIONS_METHOD = "OPTIONS";
 
         #endregion
@@ -199,7 +199,7 @@ namespace QuickLearn.BizTalk
             // http://www.w3.org/TR/cors/
 
             object httpMethod = null;
-            httpMethod = inmsg.Context.Read(HTTP_METHOD, WCF_PROPERTIES_NS);
+            httpMethod = inmsg.Context.Read(HTTP_METHOD_PROPNAME, WCF_PROPERTIES_NS);
 
             if (httpMethod != null && (httpMethod as string) == OPTIONS_METHOD)
             {
@@ -245,7 +245,7 @@ namespace QuickLearn.BizTalk
             // which will contain the name of the function that should be passed the JSON data returned
             // by the service.
 
-            object jsonpCallback = inmsg.Context.Read(JSONP_CALLBACK, JSON_SCHEMAS_NS);
+            object jsonpCallback = inmsg.Context.Read(JSONP_CALLBACK_PROPNAME, JSON_SCHEMAS_NS);
             string jsonpCallbackName = (jsonpCallback ?? (object)string.Empty) as string;
 
             if (!string.IsNullOrWhiteSpace(jsonpCallbackName))
