@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>QuickLearn JSON Encoder / Decoder Example</title>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        
+        function getDataToSend()
+        {
+            var itemList = JSON.parse($("#payload").val());
+            return itemList;
+
+        }
+
+        function sendDataCORS(data)
+        {
+
+            var request = $.ajax({
+                url: $("#serverUrl").val(),
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(data),
+                processData: false,
+                dataType: 'json'
+            })
+
+            request.fail(function (data) { alert("Something is broken: " + data.statusText); });
+            request.success(function (result) {
+                alert("Everything went great! Item amount average for " + result.itemCount + " items was " + result.itemAmountAvg + ".");
+                $("#payload").val(JSON.stringify(result));
+            });
+            
+        }
+
+        function sendDataJSONP() {
+
+            var request = $.getJSON($("#serverUrlJsonp").val() + "?callback=?");
+
+            request.fail(function (data) { alert("Something is broken: " + data.statusText); });
+            request.success(function (result) {
+                alert("Everything went great! Server sent us " + result.itemCount + " items.");
+                $("#payload").val(JSON.stringify(result));
+            });
+
+        }
+
+    </script>
+
+    <h1>JSON Decode/Encode Pipeline Components Demo</h1>
+
+    <h2>Choose Your Payload</h2>
+    <p>
+        This page will submit the following payload:
+        </p>
+        <textarea id="payload" rows="15" cols="65">{
+    "itemCount": 2,
+    "items": [{
+        "item": {
+            "id": "1",
+            "amount": 500
+        }
+    },
+        {
+            "item": {
+                "id": "2",
+                "amount": 1000
+            }
+        }]
+}</textarea>    
+        <p>
+        This payload represents a list of items. These items have "amounts" (whatever that means). These amounts can be averaged through the use of a RESTful-ish service that accepts/responds with JSON.
+    </p>
+    <h2>Choose Your Endpoint and Submission Method</h2>
+    <p>
+        There are two methods presented below for invoking the service
+    </p>
+    <input type="url" id="serverUrlJsonp" value="http://crossdomain.example.org/ListProcessor/api/ItemsList" size="100" /><br /><br />
+    <input type="button" value="Submit Request for List of Items via JSONP" onclick="sendDataJSONP()" />
+    <br /><br />
+    <input type="url" id="serverUrl" value="http://crossdomain.example.org/ListProcessor/api/ItemAverageRequest" size="100" /><br /><br />
+    <input type="button" value="Submit Request for Avg Item Amount via CORS" onclick="sendDataCORS(getDataToSend())" />
+    
+</body>
+</html>
