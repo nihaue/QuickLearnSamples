@@ -74,10 +74,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\..\..\Desktop\sample.json">
-      <Link>Messages\sample.json</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <None Include="Messages\sample.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
