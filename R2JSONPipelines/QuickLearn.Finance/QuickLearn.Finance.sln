@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickLearn.Finance.Messaging", "QuickLearn.Finance.Messaging\QuickLearn.Finance.Messaging.btproj", "{ACC3C195-12C5-4095-84A6-40BFC200C36E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickLearn.Finance.Messaging.Test", "QuickLearn.Finance.Messaging.TEst\QuickLearn.Finance.Messaging.Test.csproj", "{CD376283-E5C8-474E-B1A2-CD2218A25F49}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6B1117C5-8C78-4A5C-924A-53031D842BB2}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{BCA27E39-9D46-4016-BCBE-AE8183888991}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickLearn.Finance.Pipelines", "QuickLearn.Finance.Pipelines\QuickLearn.Finance.Pipelines.btproj", "{26C43390-1D4D-4093-99BB-21FFAAB66416}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickLearn.Finance.Pipelines.Test", "QuickLearn.Finance.Pipelines.Test\QuickLearn.Finance.Pipelines.Test.csproj", "{6F222FCD-863F-4340-BD0E-308D060BFD36}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ACC3C195-12C5-4095-84A6-40BFC200C36E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACC3C195-12C5-4095-84A6-40BFC200C36E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACC3C195-12C5-4095-84A6-40BFC200C36E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{ACC3C195-12C5-4095-84A6-40BFC200C36E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACC3C195-12C5-4095-84A6-40BFC200C36E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACC3C195-12C5-4095-84A6-40BFC200C36E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{CD376283-E5C8-474E-B1A2-CD2218A25F49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD376283-E5C8-474E-B1A2-CD2218A25F49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD376283-E5C8-474E-B1A2-CD2218A25F49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD376283-E5C8-474E-B1A2-CD2218A25F49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26C43390-1D4D-4093-99BB-21FFAAB66416}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26C43390-1D4D-4093-99BB-21FFAAB66416}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26C43390-1D4D-4093-99BB-21FFAAB66416}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{26C43390-1D4D-4093-99BB-21FFAAB66416}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26C43390-1D4D-4093-99BB-21FFAAB66416}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26C43390-1D4D-4093-99BB-21FFAAB66416}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{6F222FCD-863F-4340-BD0E-308D060BFD36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F222FCD-863F-4340-BD0E-308D060BFD36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F222FCD-863F-4340-BD0E-308D060BFD36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F222FCD-863F-4340-BD0E-308D060BFD36}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

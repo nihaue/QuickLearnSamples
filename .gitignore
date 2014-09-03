@@ -1,0 +1,20 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/JSONSchemas/QuickLearn.Finance/QuickLearn.Finance.Messaging/obj/Debug
+/JSONSchemas/QuickLearn.Finance/QuickLearn.Finance.Messaging.Test/obj/Debug
+/R2JSONPipelines/QuickLearn.Finance/packages
+/R2JSONPipelines/QuickLearn.Finance/QuickLearn.Finance.Messaging/bin/Debug
+/R2JSONPipelines/QuickLearn.Finance/QuickLearn.Finance.Messaging/obj/Debug
+/R2JSONPipelines/QuickLearn.Finance/QuickLearn.Finance.Messaging.Test/bin/Debug
+/R2JSONPipelines/QuickLearn.Finance/QuickLearn.Finance.Messaging.Test/obj/Debug
+/R2JSONPipelines/QuickLearn.Finance/QuickLearn.Finance.Pipelines/bin/Debug
+/R2JSONPipelines/QuickLearn.Finance/QuickLearn.Finance.Pipelines/obj/Debug
+/R2JSONPipelines/QuickLearn.Finance/QuickLearn.Finance.Pipelines.Test/bin/Debug
+/R2JSONPipelines/QuickLearn.Finance/QuickLearn.Finance.Pipelines.Test/FakesAssemblies
+/R2JSONPipelines/QuickLearn.Finance/QuickLearn.Finance.Pipelines.Test/obj/Debug
+/R2JSONPipelines/QuickLearn.Finance/TestResults
+/JSONSchemas/QuickLearn.Finance/packages/Newtonsoft.Json.6.0.4
+/JSONSchemas/QuickLearn.Finance/QuickLearn.Finance.Messaging/bin/Debug
+/JSONSchemas/QuickLearn.Finance/QuickLearn.Finance.Messaging.Test/bin/Debug
