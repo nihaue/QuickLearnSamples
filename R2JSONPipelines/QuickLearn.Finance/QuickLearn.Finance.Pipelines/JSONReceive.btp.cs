@@ -53,7 +53,7 @@ namespace QuickLearn.Finance.Pipelines
 "arty resolution</CachedDisplayName>          <CachedIsManaged>true</CachedIsManaged>        </Compon"+
 "ent>      </Components>    </Stage>  </Stages></Document>";
         
-        private const string _versionDependentGuid = "097a3436-83de-406f-a980-c482ba1e60f1";
+        private const string _versionDependentGuid = "dc7bb15c-15cd-4697-81ec-92131a5872d2";
         
         public JSONReceive()
         {
